@@ -63,13 +63,103 @@
                     <view key="view" contentMode="scaleToFill" id="Tg6-XB-eac">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-Pz-PVi">
+                                <rect key="frame" x="8" y="72" width="359" height="538"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MargheritaPizza" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-FJ-R3c">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="184.5"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7B-Rs-6Rb">
+                                        <rect key="frame" x="0.0" y="184.5" width="359" height="353.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNT-TO-T1T">
+                                                <rect key="frame" x="280.5" y="33" width="70.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-Go-ndw">
+                                                <rect key="frame" x="20" y="303.5" width="319" height="30"/>
+                                                <color key="backgroundColor" red="0.25852383675773061" green="0.44372593798083415" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="dGp-4x-pSl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Add to order">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addToOrderButton:" destination="JVX-MV-lCH" eventType="touchUpInside" id="DKT-Y1-lkZ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Grilled Steelhead Trout Sandwich" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbi-2j-L5Y">
+                                                <rect key="frame" x="8" y="16" width="198.5" height="58.5"/>
+                                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42s-nW-nOy">
+                                                <rect key="frame" x="8" y="82.5" width="343" height="213"/>
+                                                <string key="text">Stewed sliced beef with yellow onions and garlic in a vinegar-soy sauce. Served with steamed jasmine rice and sautéed vegetables.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="QNT-TO-T1T" firstAttribute="top" secondItem="j7B-Rs-6Rb" secondAttribute="topMargin" constant="25" id="0YL-XZ-60m"/>
+                                            <constraint firstAttribute="trailing" secondItem="SJQ-Go-ndw" secondAttribute="trailing" constant="20" id="2BO-WG-Sr8"/>
+                                            <constraint firstItem="42s-nW-nOy" firstAttribute="leading" secondItem="j7B-Rs-6Rb" secondAttribute="leading" constant="8" id="JjV-9U-EFC"/>
+                                            <constraint firstItem="Dbi-2j-L5Y" firstAttribute="top" secondItem="j7B-Rs-6Rb" secondAttribute="topMargin" constant="8" id="Obs-IY-CMN"/>
+                                            <constraint firstAttribute="trailing" secondItem="42s-nW-nOy" secondAttribute="trailing" constant="8" id="WoF-Ig-9WK"/>
+                                            <constraint firstAttribute="bottom" secondItem="SJQ-Go-ndw" secondAttribute="bottom" constant="20" id="dbw-zf-My9"/>
+                                            <constraint firstItem="SJQ-Go-ndw" firstAttribute="leading" secondItem="j7B-Rs-6Rb" secondAttribute="leading" constant="20" id="g1v-ym-RSa"/>
+                                            <constraint firstItem="Dbi-2j-L5Y" firstAttribute="leading" secondItem="j7B-Rs-6Rb" secondAttribute="leadingMargin" id="i1u-qX-hqq"/>
+                                            <constraint firstItem="42s-nW-nOy" firstAttribute="top" secondItem="Dbi-2j-L5Y" secondAttribute="bottom" constant="8" id="k3A-29-p8b"/>
+                                            <constraint firstItem="QNT-TO-T1T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dbi-2j-L5Y" secondAttribute="trailing" id="nbk-Rc-e78"/>
+                                            <constraint firstItem="SJQ-Go-ndw" firstAttribute="top" secondItem="42s-nW-nOy" secondAttribute="bottom" constant="8" id="qnG-yv-v8u"/>
+                                            <constraint firstItem="QNT-TO-T1T" firstAttribute="trailing" secondItem="j7B-Rs-6Rb" secondAttribute="trailingMargin" id="v0P-Ek-wwR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cDB-FJ-R3c" firstAttribute="height" secondItem="fri-Pt-PFc" secondAttribute="height" multiplier="1/3" id="IuW-3Z-qlh"/>
+                            <constraint firstItem="JIK-Pz-PVi" firstAttribute="leading" secondItem="fri-Pt-PFc" secondAttribute="leading" constant="8" id="PpK-yI-CK2"/>
+                            <constraint firstItem="cDB-FJ-R3c" firstAttribute="width" secondItem="fri-Pt-PFc" secondAttribute="width" multiplier="1/3" id="eRS-gl-G0i"/>
+                            <constraint firstItem="fri-Pt-PFc" firstAttribute="trailing" secondItem="JIK-Pz-PVi" secondAttribute="trailing" constant="8" id="gFJ-Sc-cV1"/>
+                            <constraint firstItem="JIK-Pz-PVi" firstAttribute="top" secondItem="fri-Pt-PFc" secondAttribute="top" constant="8" id="mPj-ap-teF"/>
+                            <constraint firstItem="fri-Pt-PFc" firstAttribute="bottom" secondItem="JIK-Pz-PVi" secondAttribute="bottom" constant="8" id="wYi-MC-PVZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fri-Pt-PFc"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eRS-gl-G0i"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="IuW-3Z-qlh"/>
+                                <include reference="eRS-gl-G0i"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="SJQ-Go-ndw" id="qK3-PC-qC3"/>
+                        <outlet property="detailTextLabel" destination="42s-nW-nOy" id="VbR-Kc-tVn"/>
+                        <outlet property="imageView" destination="cDB-FJ-R3c" id="gaE-K8-OLk"/>
+                        <outlet property="priceLabel" destination="QNT-TO-T1T" id="t7g-Ff-rRs"/>
+                        <outlet property="titleLabel" destination="Dbi-2j-L5Y" id="Bae-1F-Bic"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1X-zX-Omm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="-891"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="-891.00449775112452"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="6fL-bv-p9a">
@@ -104,7 +194,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JVX-MV-lCH" kind="show" id="TRV-Bs-Eb3"/>
+                                    <segue destination="JVX-MV-lCH" kind="show" identifier="DetailSegue" id="TRV-Bs-Eb3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -186,4 +276,7 @@
             <point key="canvasLocation" x="-1249" y="-468"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MargheritaPizza" width="540" height="540"/>
+    </resources>
 </document>
