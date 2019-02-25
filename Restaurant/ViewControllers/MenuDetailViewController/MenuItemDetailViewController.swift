@@ -47,6 +47,13 @@ class MenuItemDetailViewController: UIViewController {
             self.addToOrderButton.transform = CGAffineTransform.identity
         }
         
+        MenuController.shared.order.menuItems.append(item)
+        
     }
     
+
+    
+
+    
+
 }

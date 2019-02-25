@@ -18,6 +18,13 @@ class MenuController{
     private init(){}
     
     
+    static let orderUpdateNotification = Notification.Name("MenuController.orderUpdated")
+    
+    var order = Order(){
+        didSet{
+            NotificationCenter.default.post(name: MenuController.orderUpdateNotification, object: nil)
+        }
+    }
     
     //MARK -... Methods
     func fetchCategories(completion: @escaping ([String]?) -> Void){
