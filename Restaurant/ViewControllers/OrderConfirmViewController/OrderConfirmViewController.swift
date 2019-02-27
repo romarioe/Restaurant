@@ -17,6 +17,8 @@ class OrderConfirmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        remiendTimeLabel.text = "Thank you for your order.  You wait time is \(time) minutes"
       
     }
     

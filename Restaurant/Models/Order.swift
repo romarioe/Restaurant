@@ -7,6 +7,15 @@
 //
 
 struct Order: Codable{
+    var menuItems: [MenuItem: Int]
+    
+    init(menuItems: [MenuItem: Int] = [:]){
+        self.menuItems = menuItems
+    }
+}
+
+
+struct OrderForSubmit: Codable{
     var menuItems: [MenuItem]
     
     init(menuItems: [MenuItem] = []){

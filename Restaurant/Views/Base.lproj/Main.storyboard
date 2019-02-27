@@ -18,6 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="2VU-Z8-bU6">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="lJw-Vp-OsZ" detailTextLabel="uwe-qi-z3g" style="IBUITableViewCellStyleSubtitle" id="YqU-9v-alO">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -50,25 +55,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Order" id="Mrs-wd-W61">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="0a6-Bk-Xv9">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="0a6-Bk-Xv9">
                             <connections>
                                 <action selector="submitTapped:" destination="ASY-fS-SvN" id="zIf-ic-YrD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="LMi-g0-mXF" kind="show" id="eAD-At-BGo"/>
+                        <segue destination="LMi-g0-mXF" kind="show" identifier="ConfirmSegue" id="eAD-At-BGo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMy-Hf-CIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="-124"/>
         </scene>
-        <!--Item-->
+        <!--Order-->
         <scene sceneID="yDa-c0-Iou">
             <objects>
                 <navigationController id="YSr-uy-dzu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vaE-0L-N27"/>
+                    <tabBarItem key="tabBarItem" title="Order" image="order28" id="vaE-0L-N27"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NVH-v9-TPX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,7 +97,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-Pz-PVi">
                                 <rect key="frame" x="8" y="72" width="359" height="538"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MargheritaPizza" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-FJ-R3c">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-FJ-R3c">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="184.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7B-Rs-6Rb">
@@ -195,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="ZxU-fx-5rM">
-                                <rect key="frame" x="20" y="214" width="333" height="111.5"/>
+                                <rect key="frame" x="20" y="170" width="333" height="111.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-fT-A7S">
                                         <rect key="frame" x="143" y="0.0" width="47.5" height="27.5"/>
@@ -213,7 +218,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3Vs-2k-yLr" kind="unwind" unwindAction="unwindWithSegue:" id="3Um-C4-dkH"/>
+                                            <segue destination="3Vs-2k-yLr" kind="unwind" identifier="DismissConfirm" unwindAction="unwindWithSegue:" id="VWL-ph-jel"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -230,6 +235,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WlS-ZD-fvC"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="remiendTimeLabel" destination="0pd-fT-A7S" id="ZiM-M7-mTq"/>
                     </connections>
@@ -247,6 +254,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="57D-Lq-tJl">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" textLabel="Atv-pR-xCg" detailTextLabel="gx2-uv-9tE" style="IBUITableViewCellStyleSubtitle" id="69a-va-P64">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -294,6 +306,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Twa-cY-FvD">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="Wx0-1E-U4K">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -318,11 +335,11 @@
             </objects>
             <point key="canvasLocation" x="524" y="-891"/>
         </scene>
-        <!--Item-->
+        <!--Menu-->
         <scene sceneID="xcw-vr-Bre">
             <objects>
                 <navigationController id="AZL-SO-uF4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ln1-dm-Egh"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menu" id="ln1-dm-Egh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rru-Dt-E2U">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -355,6 +372,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MargheritaPizza" width="540" height="540"/>
+        <image name="menu" width="42" height="42"/>
+        <image name="order28" width="42" height="42"/>
     </resources>
 </document>

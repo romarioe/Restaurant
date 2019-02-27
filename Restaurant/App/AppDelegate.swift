@@ -14,9 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var orderTabBarItem: UITabBarItem!
+    
+    
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        let temporaryDirectory = NSTemporaryDirectory()
+        let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: temporaryDirectory)
+        URLCache.shared = urlCache
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateBage), name: MenuController.orderUpdateNotification, object: nil)
         
@@ -29,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     @objc func updateBage(){
-        let meals = MenuController.shared.order.menuItems.count
+        let meals = MenuController.shared.orderForSubmit.menuItems.count
         
         if meals == 0 {
             orderTabBarItem.badgeValue = nil

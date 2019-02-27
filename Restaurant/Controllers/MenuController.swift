@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MenuController{
 
@@ -20,7 +21,10 @@ class MenuController{
     
     static let orderUpdateNotification = Notification.Name("MenuController.orderUpdated")
     
-    var order = Order(){
+    var order = Order()
+    
+    
+    var orderForSubmit = OrderForSubmit(){
         didSet{
             NotificationCenter.default.post(name: MenuController.orderUpdateNotification, object: nil)
         }
@@ -44,7 +48,27 @@ class MenuController{
     }
     
     
-    func fetchImage(){
+    func fetchImage(url: URL?, comoletion: @escaping (UIImage?) -> Void){
+        guard let url = url else {
+            comoletion(nil)
+            return
+            
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                comoletion(nil)
+                return
+                
+            }
+            
+            
+            guard let image = UIImage(data: data) else {return}
+            comoletion(image)
+            
+            }.resume()
+        
+        
         
     }
     

@@ -12,6 +12,7 @@
 		4291389B222456F90063AA86 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291389A222456F90063AA86 /* OrderTableViewController.swift */; };
 		4291389D2224571D0063AA86 /* OrderTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291389C2224571D0063AA86 /* OrderTableViewController+DataSource.swift */; };
 		429138A0222460C40063AA86 /* OrderConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291389F222460C40063AA86 /* OrderConfirmViewController.swift */; };
+		42B9CABE22270CEF0040BB3D /* OrderTableViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9CABD22270CEF0040BB3D /* OrderTableViewController+Delegate.swift */; };
 		42FF497E221C7337002BEA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF497D221C7337002BEA40 /* AppDelegate.swift */; };
 		42FF4983221C7337002BEA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FF4981221C7337002BEA40 /* Main.storyboard */; };
 		42FF4985221C733A002BEA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FF4984221C733A002BEA40 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		4291389A222456F90063AA86 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		4291389C2224571D0063AA86 /* OrderTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4291389F222460C40063AA86 /* OrderConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmViewController.swift; sourceTree = "<group>"; };
+		42B9CABD22270CEF0040BB3D /* OrderTableViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderTableViewController+Delegate.swift"; sourceTree = "<group>"; };
 		42FF497A221C7337002BEA40 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF497D221C7337002BEA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FF4982221C7337002BEA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				4291389A222456F90063AA86 /* OrderTableViewController.swift */,
 				4291389C2224571D0063AA86 /* OrderTableViewController+DataSource.swift */,
+				42B9CABD22270CEF0040BB3D /* OrderTableViewController+Delegate.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FF49A0221C7ABA002BEA40 /* MenuController.swift in Sources */,
+				42B9CABE22270CEF0040BB3D /* OrderTableViewController+Delegate.swift in Sources */,
 				42FF497E221C7337002BEA40 /* AppDelegate.swift in Sources */,
 				42FF4994221C7585002BEA40 /* CategoryTableViewController.swift in Sources */,
 				4211E2622221C6A000D7A0DC /* MenuTableViewController+DataSource.swift in Sources */,
